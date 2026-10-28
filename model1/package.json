@@ -1,0 +1,10 @@
+{
+  "name": "merdiven-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Merdiven 3D yerel goruntuleyici",
+  "scripts": {
+    "dev": "node server.cjs",
+    "start": "node server.cjs"
+  }
+}

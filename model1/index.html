@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Merdiven / 3D İnceleme</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="./"><span class="mark">▥</span> YAPI<span class="brand-light">/ ATÖLYE</span></a><span class="project-name">MERDİVEN ÇALIŞMASI <span class="divider">/</span> 01</span><span class="live"><i></i> YEREL GÖRÜNTÜLEYİCİ</span></header>
+<main>
+<aside>
+<div class="eyebrow">FOTOĞRAFTAN MEKÂNA</div><h1>Bir merdiven.<br>Her açıdan.</h1><p class="intro">Ahşabın sıcaklığı, çeliğin çizgisi.<br>Referans fotoğraflarından oluşturulan<br>üç kollu merdiveni keşfedin.</p>
+<div class="section-label">01 <span>MODEL BİLGİLERİ</span></div>
+<div class="stats"><div><strong>3</strong><span>Merdiven kolu</span></div><div><strong>38</strong><span>Toplam basamak</span></div><div><strong>1,80 <small>m</small></strong><span>Kol genişliği</span></div><div><strong>6,27 <small>m</small></strong><span>Toplam yükselme</span></div></div>
+<div class="note"><span>↗</span><p>Fotoğraflara dayalı yaklaşık model.<br>Ölçüler yerinde doğrulanmamıştır.</p></div>
+<div class="section-label">02 <span>KATMANLAR</span></div>
+<label class="switch-row"><span><i class="swatch wood"></i>Basamak ve sahanlıklar</span><input type="checkbox" data-layer="stair" checked></label>
+<label class="switch-row"><span><i class="swatch metal"></i>Metal korkuluklar</span><input type="checkbox" data-layer="rail" checked></label>
+<label class="switch-row"><span><i class="swatch glass"></i>Mimari çevre</span><input type="checkbox" data-layer="context" checked></label>
+<label class="switch-row"><span><i class="swatch metal"></i>Kat döşemeleri</span><input type="checkbox" data-layer="upper" checked></label>
+<label class="switch-row"><span><i class="swatch glass"></i>Üst kat tavanı</span><input type="checkbox" data-layer="ceiling" checked></label>
+<label class="switch-row"><span><i class="swatch art"></i>Renkli asma düzenleme</span><input type="checkbox" data-layer="installation" checked></label>
+<label class="switch-row"><span><i class="swatch water"></i>Pencerelerde su damlaları</span><input type="checkbox" data-layer="water" checked></label>
+<label class="switch-row"><span><i class="swatch art"></i>Renkli pencere camları</span><input type="checkbox" data-layer="glazing" checked></label>
+<label class="switch-row"><span><i class="swatch black"></i>Basamaklardaki siyah kutular</span><input type="checkbox" data-layer="boxes" checked></label>
+<label class="switch-row"><span><i class="swatch measure"></i>Yaklaşık ölçüler</span><input type="checkbox" id="dimensions"></label>
+<div class="download-box"><div class="section-label">03 <span>MODELİ YANINIZA ALIN</span></div><a class="download" href="downloads/merdiven.skb" download>↓ <span>.SKB dosyasını indir</span><span class="arrow">↗</span></a><div class="download-sub"><a href="downloads/merdiven.skp" download>SketchUp modeli (.skp) ↓</a><span id="fileSize">2131 KB</span></div><p>SKB, yerel SketchUp modelinin yedek kopyasıdır. Doğrudan açmak için .SKP seçeneğini kullanın.</p></div>
+<div class="drawing-downloads"><a href="downloads/merdiven-plan.svg" download>Plan (.svg) ↓</a><a href="downloads/merdiven-kesit.svg" download>Boy kesit (.svg) ↓</a></div><p class="installation-note">Merdiven üstündeki X çaprazlara bağlı<br>84 askı · 325 renkli plaka<br>Pencerelerde 60 damla · 36 / 45 / 54 cm<br>Boy oranı 1 : 1,25 : 1,50<br>Renkli yarı saydam camlar ve ışık izleri<br>Referansa göre 14 siyah düzenleme<br>Kalın yatay parçalar, eğimli bağlantılar<br>ve derin boşluklu yan hacimler</p><p class="drawing-note">Şematik çizimler · 1/100, A3 yatay. Tavan kotu +9,27 m ve döşeme kalınlıkları varsayımdır. Plan görünüşünde tavan gizlenir.</p>
+<button class="references" id="openPhotos"><span>▧</span> Referans fotoğrafları <span>11 ↗</span></button>
+</aside>
+<section class="viewer" aria-label="Etkileşimli 3D merdiven modeli">
+<div class="viewer-heading"><div><span class="pill">3D MODEL</span><span class="model-title">Ahşap & Çelik / Merdiven</span></div><button class="icon-btn" id="fullscreen" aria-label="Tam ekran" title="Tam ekran">⛶</button></div>
+<canvas id="scene" tabindex="0" aria-label="Merdiveni döndürmek için sürükleyin; yakınlaştırmak için tekerleği kullanın"></canvas><canvas id="annotations" aria-hidden="true"></canvas>
+<div class="loading" id="loading">Model hazırlanıyor…</div>
+<div class="view-nav" role="group" aria-label="Bakış açısı"><button class="selected" data-view="perspective">Perspektif</button><button data-view="detail">Hacimler</button><button data-view="front">Ön</button><button data-view="side">Yan</button><button data-view="top">Plan</button><button data-view="section">Boy kesit</button></div>
+<div class="tools"><button class="icon-btn" id="zoomIn" title="Yakınlaştır" aria-label="Yakınlaştır">＋</button><button class="icon-btn" id="zoomOut" title="Uzaklaştır" aria-label="Uzaklaştır">−</button><span></span><button class="icon-btn" id="reset" title="Görünümü sıfırla" aria-label="Görünümü sıfırla">↺</button><button class="icon-btn" id="autoRotate" title="Otomatik döndür" aria-label="Otomatik döndür" aria-pressed="false">⟳</button><button class="icon-btn" id="capture" title="Görüntüyü indir" aria-label="Görüntüyü indir">▣</button></div>
+<div class="viewer-bottom"><div class="interaction"><span>◉</span> Sürükle: döndür <b>·</b> Tekerlek: yakınlaştır <b>·</b> Sağ tuş: kaydır</div><div class="axis"><span class="ax-y">Y</span><span class="ax-z">Z</span><span class="ax-x">X</span><svg width="45" height="45"><path d="M22 23V3M22 23L40 34M22 23L5 34" fill="none" stroke="#9baca1"/></svg></div></div>
+<div class="model-caption"><span class="caption-line"></span><span>38 BASAMAK <b>/</b> 2 ARA SAHANLIK <b>/</b> RENKLİ ASMA DÜZENLEME</span></div>
+</section>
+</main>
+<dialog id="photos"><div class="modal-head"><div><span class="eyebrow">GÖRSEL ARŞİV</span><h2>Referans fotoğrafları</h2></div><button id="closePhotos" class="icon-btn" aria-label="Fotoğrafları kapat">✕</button></div><p>Model bu 11 fotoğraftaki görünür detaylar esas alınarak oluşturuldu. Basamak sayısı ve ölçüler yaklaşık kabul edilmiştir.</p><div id="photoGrid"></div></dialog>
+<div id="toast" role="status"></div><script src="app.js" defer></script>
+</body></html>
+
